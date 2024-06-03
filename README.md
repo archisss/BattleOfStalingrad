@@ -21,9 +21,10 @@ The game is done using php 8.2 with laravel framework and MongoDB the API is doc
      > docker-compose up --build
   4. Go into de container battleofstalingrad-app-1 <br/>Run the BASH or EXEC into the battleofstalingrad-app-1 container and run:
      > composer install <br/><br/>
-  NOTE: this is because I use a especific library for connect to the mongo DB database so is needed to reinstall all the vendor packages. 
- 
-  7. Once the project is up and running go to <br /> http://localhost:8000/start <br />
+  NOTE: this is because I use a especific library for connect to the mongo DB database so is needed to reinstall all the vendor packages.
+  5. Start the laravel server with the command:
+     > php artisan serve
+  6. Once the project is up and running go to <br /> http://localhost:8000/start <br />
      This command will setup tanks and maps needed to play the game 
 
   
