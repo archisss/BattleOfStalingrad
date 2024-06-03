@@ -3,7 +3,7 @@
 a mini game (text format) that emulates a turn-based battle of Stalingrad
 between the two tanks. 
 
-The game is done using php 8.2 wirh laravel framework and MongoDB the API is documented using Swagger 
+The game is done using php 8.2 with laravel framework and MongoDB the API is documented using Swagger 
 
 ## Prerequisites 
 
@@ -12,7 +12,7 @@ The game is done using php 8.2 wirh laravel framework and MongoDB the API is doc
 
 ## Prerequisites 
 
-- To install Battle of Stalingrad, follow these steps:
+**To install Battle of Stalingrad, follow these steps:**
   1. Clone the repository from GitHub:
      > https://github.com/archisss/BattleOfStalingrad
   2. Navigate to the project directory:
@@ -22,7 +22,8 @@ The game is done using php 8.2 wirh laravel framework and MongoDB the API is doc
   5. Verify that the containers are running:
      > docker-compose ps
  
-  7. Once the project is up and running go to http://localhost:8000/start
+  7. Once the project is up and running go to <br /> http://localhost:8000/start <br />
+     This command will setup tanks and maps needed to play the game 
 
   
 ## Swagger Documentation
