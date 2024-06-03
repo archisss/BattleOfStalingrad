@@ -1,0 +1,152 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Battle Game",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/leaderboard": {
+            "get": {
+                "summary": "All-time/global Leaderboard",
+                "operationId": "d47248240f6123732c13bcf30222d345",
+                "responses": {
+                    "200": {
+                        "description": "Get the information for a map in the database"
+                    }
+                }
+            }
+        },
+        "/api/mapInfo/{id}": {
+            "post": {
+                "summary": "Load map information from database",
+                "operationId": "ba3c42b86c25faebea8edb84c002ac14",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Load a map from database",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get the information for a map in the database"
+                    }
+                }
+            }
+        },
+        "/api/AIsimulation/": {
+            "post": {
+                "description": "Automatic simulation  of battle between random tanks in a random map",
+                "operationId": "f553907baf1d1f66f39c6bf1a996da61",
+                "responses": {
+                    "200": {
+                        "description": "Battle are finish, Simulation completed"
+                    }
+                }
+            }
+        },
+        "/api/manualSimulation/": {
+            "post": {
+                "description": "Manual battle simulation between tanks",
+                "operationId": "a885c191dd670f5b98e7bc22f31385c0",
+                "parameters": [
+                    {
+                        "name": "tanks[]",
+                        "in": "query",
+                        "description": "Create an array of 2 Tanks",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    {
+                        "name": "mapid",
+                        "in": "query",
+                        "description": "Map id",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Manual simulation was running correctly"
+                    },
+                    "500": {
+                        "description": "One tank can play again itselft"
+                    }
+                }
+            }
+        },
+        "/api/score/{id}": {
+            "post": {
+                "summary": "display battle score in JSON format",
+                "operationId": "3eef5c0cba67e76c8034192d9de6962d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Display the battle score",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Display the battle score in JSON"
+                    }
+                }
+            }
+        },
+        "/api/tankInfo/{id}": {
+            "post": {
+                "summary": "Load tank information from database",
+                "operationId": "51d4c6eba675ac4fac14f015450884b4",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Load a tank from database",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "examples": {
+                            "int": {
+                                "summary": "An int value.",
+                                "value": "1"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get the information for the tank from the database"
+                    }
+                }
+            }
+        }
+    }
+}

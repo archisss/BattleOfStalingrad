@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+    app:
+        build:
+            context: .
+        working_dir: /var/www/battle-of-stalingrad
+        ports:
+            - "8000:80"
+        volumes:
+            - .:/var/www/battle-of-stalingrad
+        depends_on:
+            - mongo
+    mongo:
+        image: mongo:latest
+        ports:
+            - "28017:28017"
